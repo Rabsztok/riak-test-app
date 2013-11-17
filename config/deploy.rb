@@ -13,7 +13,7 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 set :term_mode, :system
 set :domain, 'merch-home-riak'
 set :deploy_to, '/home/app'
-set :repository, 'git@github.com:Rabsztok/riak-test-app.git'
+set :repository, 'https://github.com/Rabsztok/riak-test-app.git'
 set :branch, 'master'
 
 set :shared_paths, ['config/database.yml', 'config/ripple.yml', 'public/system', 'log']
