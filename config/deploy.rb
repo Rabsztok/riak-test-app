@@ -32,6 +32,9 @@ task :setup => :environment do
   queue! %[touch "#{deploy_to}/shared/config/ripple.yml"]
   queue  %[echo "-----> Be sure to edit 'shared/config/ripple.yml'."]
 
+  queue! %[touch "#{deploy_to}/shared/config/initializers/carrierwave.yml"]
+  queue  %[echo "-----> Be sure to edit 'shared/config/initializers/carrierwave.yml'."]
+
   queue! %[ln -s "/media/storage/system" "#{deploy_to}/shared/public/system"]
 end
 

@@ -16,8 +16,6 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'mina'
 gem 'mysql2'
-gem 'paperclip'
-gem 'paperclip-riak'
 gem 'sidekiq'
 gem 'forgery'
 gem 'blasphemy'
@@ -27,3 +25,4 @@ gem 'curb'
 gem 'yajl-ruby'
 gem 'riak-client', :require => 'riak'
 gem "ripple", "1.0.0.beta2"
+gem 'carrierwave-riak', :require => "carrierwave/riak"
