@@ -18,6 +18,9 @@ gem 'mina'
 gem 'mysql2'
 gem 'paperclip'
 gem 'paperclip-riak'
+gem 'sidekiq'
+gem 'forgery'
+gem 'blasphemy'
 
 # Riak database
 gem 'curb'

@@ -1,6 +1,5 @@
 class RiakAudio < ActiveRecord::Base
   attr_accessible :name, :attachment
-  attr_accessor :attachment_file_name
 
   has_attached_file :attachment,
     :storage => :riak,
@@ -13,5 +12,5 @@ class RiakAudio < ActiveRecord::Base
     ],
     :riak_bucket => 'audios',
     :riak_endpoint => 'http://127.0.0.1:10018/riak',
-    :path => ":id_:name.:extension"
+    :path => ":id_:filename"
 end
