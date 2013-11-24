@@ -19,7 +19,7 @@ set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'config/ripple.yml', 'public/system', 'log']
 
 task :environment do
-  invoke :'rvm:use[ruby-1.9.3-p392@default]'
+  invoke :'rbenv:use[ruby-1.9.3-p392@default]'
 end
 
 task :setup => :environment do
