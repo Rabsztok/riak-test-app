@@ -16,7 +16,7 @@ set :deploy_to, '/home/app'
 set :repository, 'https://github.com/Rabsztok/riak-test-app.git'
 set :branch, 'master'
 
-set :shared_paths, ['config/database.yml', 'config/ripple.yml', 'config/initializers/carrierwave.yml', 'public/system', 'log']
+set :shared_paths, ['config/database.yml', 'config/ripple.yml', 'config/initializers/carrierwave.rb', 'public/system', 'log']
 
 task :environment do
   invoke :'rbenv:load'
