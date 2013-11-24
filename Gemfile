@@ -16,6 +16,10 @@ group :development do
   gem 'pry'
 end
 
+group :production do
+  gem 'passenger'
+end
+
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'mina'
