@@ -11,15 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131019124512) do
+ActiveRecord::Schema.define(:version => 20131124202408) do
 
   create_table "riak_audios", :force => true do |t|
     t.string   "name"
-    t.string   "attachment_file_name"
-    t.string   "attachment_content_type"
-    t.string   "attachment_file_size"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.string   "attachment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

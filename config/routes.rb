@@ -1,3 +1,9 @@
 Riak::Application.routes.draw do
-  root :to => 'main#index'
+  resources :riak_audios do
+    member do
+      get 'download'
+    end
+  end
+
+  root :to => 'riak_audios#index'
 end

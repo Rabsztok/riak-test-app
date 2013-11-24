@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  attachment: MyString
 
 two:
   name: MyString
+  attachment: MyString
