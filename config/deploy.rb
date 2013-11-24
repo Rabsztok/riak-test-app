@@ -9,7 +9,7 @@ set :domain, 'merch-home-riak'
 set :deploy_to, '/home/app'
 set :repository, 'https://github.com/Rabsztok/riak-test-app.git'
 set :branch, 'master'
-
+set :sidekiq_processes, 8
 set :shared_paths, ['config/database.yml', 'config/ripple.yml', 'config/initializers/carrierwave.rb', 'public/system', 'log']
 
 task :environment do
