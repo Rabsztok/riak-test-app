@@ -28,7 +28,7 @@ gem 'sidekiq'
 gem 'mina-sidekiq'
 gem 'forgery'
 gem 'blasphemy'
-gem 'will_paginate'
+gem 'kaminari'
 gem "twitter-bootstrap-rails"
 
 # Riak database
