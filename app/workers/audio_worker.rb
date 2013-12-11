@@ -4,6 +4,7 @@ class AudioWorker
 
   def perform
     file = Tempfile.new ["audio", ".wav"]
+    file.chmod '755'
     generator = case Random.rand(3)
       when 0 then Faker::SamuelLIpsum.new
       when 1 then Faker::MetalIpsum.new
