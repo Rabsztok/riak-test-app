@@ -1,6 +1,7 @@
 class RiakAudioUploader < CarrierWave::Uploader::Riak
   include CarrierWave::MimeTypes
 
+  storage :riak
   process :set_content_type
 
   def key

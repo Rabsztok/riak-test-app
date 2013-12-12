@@ -31,10 +31,10 @@ gem 'blasphemy'
 gem 'kaminari'
 gem "twitter-bootstrap-rails"
 
-# Riak database
 gem 'curb'
 gem 'yajl-ruby'
 gem 'riak-client', :require => 'riak'
 gem "ripple", "1.0.0.beta2"
 gem 'carrierwave'
 gem 'carrierwave-riak', :require => "carrierwave/riak"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
