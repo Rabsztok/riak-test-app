@@ -13,7 +13,7 @@ class AudiosController < ApplicationController
   def new
     AudioWorker.perform_async(model.slug)
 
-    redirect_to audios_path(model.slug), notify: 'New audio file is being generated'
+    redirect_to audios_path(model.slug), notice: 'New audio file is being generated...'
   end
 
   def download
