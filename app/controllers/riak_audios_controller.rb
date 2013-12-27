@@ -33,7 +33,11 @@ class RiakAudiosController < ApplicationController
 
   def download
     @riak_audio = RiakAudio.find(params[:id])
-    send_data @riak_audio.attachment.read, filename: @riak_audio.attachment.file.key, disposition: 'inline'
+    content = @riak_audio.attachment.read
+    if stale?(etag: content, last_modified: @riak_audio.updated_at.utc, public: true)
+      send_data content, type: @riak_audio.attachment.file.content_type, disposition: "inline"
+      expires_in 0, public: true
+    end
   end
 
   def create
