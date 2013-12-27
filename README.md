@@ -6,7 +6,7 @@ Zainstaluj zależności:
 
     [sudo] apt-get install redis-server mysql-server espeak
 
-Stwórz bazę danych Riak oraz MongoDB, wskazówki możesz znaleźć w wiki tego repozytorium.
+Utwórz bazę danych Riak oraz MongoDB, wskazówki możesz znaleźć w wiki tego repozytorium.
 
 Pobierz gemy:
 
