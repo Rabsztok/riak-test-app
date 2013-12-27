@@ -1,21 +1,10 @@
 Riak::Application.routes.draw do
-  resources :mongodb_audios do
-    member do
-      get 'download'
-    end
+  scope 'audios/:model' do
+    get '/', to: 'audios#index', as: 'audios'
+    get '/new', to: 'audios#new', as: 'new_audio'
+    get '/:id/download', to: 'audios#download', as: 'download_audio'
+    delete '/:id/destroy', to: 'audios#destroy', as: 'destroy_audio'
   end
 
-  resources :mysql_audios do
-    member do
-      get 'download'
-    end
-  end
-
-  resources :riak_audios do
-    member do
-      get 'download'
-    end
-  end
-
-  root :to => 'riak_audios#index'
+  root :to => 'audios#index'
 end

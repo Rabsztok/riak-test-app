@@ -24,9 +24,9 @@
           %a.brand(href="#") Riak Benchmark Application
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Riak Audios", riak_audios_path
-              %li= link_to "Mysql Audios", mysql_audios_path
-              %li= link_to "MongoDB Audios", mongodb_audios_path
+              %li= link_to "Riak Audios", audios_path('riak')
+              %li= link_to "Mysql Audios", audios_path('mysql')
+              %li= link_to "MongoDB Audios", audios_path('mongodb')
     .container
       .row-fluid
         .span12
