@@ -1,14 +1,20 @@
 require 'net/http'
 
-samp = ARGV[1].to_i
-thr = ARGV[2].to_i
 uri = URI(ARGV[0])
 
 print "\n"
-puts ARGV[0]
 
-samp.times {
-  thr.times.map {
-    Thread.new { Net::HTTP.get_response(uri) }
-  }.each(&:join)
+threads_tab = []
+0.upto(10).each { |i| threads_tab << 2**i}
+
+threads_tab.each { |thr|
+	puts "Threads - #{thr}"
+	10.times {
+  	time = Time.now
+		thr.times.map {
+	  	Thread.new { Net::HTTP.get_response(uri) }
+		}.each(&:join)
+		puts Time.now - time
+  }
+	puts ""
 }
