@@ -13,7 +13,7 @@
   %tbody
     - @audios.each do |audio|
       %tr
-        %td= link_to audio.id, audio_path(audio)
+        %td= audio.id
         %td= audio.name
         %td= audio.attachment
         %td=l audio.created_at
