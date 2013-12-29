@@ -11,4 +11,5 @@ class AudioWorker
     end
     model.try(:generate)
   end
+
 end
