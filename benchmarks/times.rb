@@ -14,6 +14,6 @@ File.open(ARGV[0]) do |file|
       end
       all_trials[trial] = tmp_threads
     end
-    all_trials.transpose.each { |line| puts line.map(&:to_f).inject(:+) /line.size.to_f }
+    all_trials.transpose.each { |line| puts (line.map(&:to_f).inject(:+) /line.size.to_f).round(2) }
   end
 end
