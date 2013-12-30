@@ -64,4 +64,6 @@ Riak::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  ActiveRecord::Base.logger = Logger.new("log/active_record.log") #This outputs the mysql quries to a file named active_record.log under your project's log folder.
+
 end
