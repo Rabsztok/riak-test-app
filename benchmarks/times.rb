@@ -1,10 +1,8 @@
-require 'pry'
-
 File.open(ARGV[0]) do |file|
   10.times do # k grup wątków
     puts threads = file.readline.to_i
     all_trials = []
-    10.times do |trial| # 10 prób
+    50.times do |trial| # 10 prób
       tmp_threads = []
       threads.times do |index| # n wątków
         line = file.readline
