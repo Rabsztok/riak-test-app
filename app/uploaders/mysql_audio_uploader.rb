@@ -3,4 +3,8 @@ class MysqlAudioUploader < CarrierWave::Uploader::Base
 
   storage :file
   process :set_content_type
+
+  def store_dir
+    'system/uploads'
+  end
 end

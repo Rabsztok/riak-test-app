@@ -9,7 +9,7 @@ class AudioWorker
       when 'mongodb' then MongodbAudio
       when 'mysql' then MysqlAudio
     end
-    model.try(:generate)
+    model.generate
   end
 
 end
