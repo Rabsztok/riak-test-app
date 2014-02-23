@@ -17,7 +17,6 @@ class AudiosController < ApplicationController
   end
 
   def download
-    logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
     start = Time.new
     @audio = model.find(params[:id])
     content = @audio.attachment.read
@@ -25,7 +24,7 @@ class AudiosController < ApplicationController
       send_data content, type: "audio/x-wav", disposition: "inline"
       expires_in 0, public: true
     end
-    logger.tagged("Benchmark-#{model.class}") { logger.info Time.now - start }
+    logger.tagged("Benchmark-#{@audio.class}") { logger.info Time.now - start }
   end
 
   def destroy
