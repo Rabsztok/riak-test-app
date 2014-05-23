@@ -1,7 +1,7 @@
 require 'net/http'
 
 def audio_path(db, id)
-	return URI("http://riak/audios/#{db}/#{id}/download")
+  return URI("http://riak/audios/#{db}/#{id}/download")
 end
 
 max_threads = 6
