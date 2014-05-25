@@ -28,7 +28,7 @@ class AudiosController < ApplicationController
   end
 
   def name
-    render text: model.find(params[:id]).text
+    render text: model.find(params[:id]).name
   end
 
   def destroy
