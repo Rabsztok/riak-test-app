@@ -8,8 +8,8 @@ module Generator
         when 1 then Faker::MetalIpsum.new
         else Faker::BaconIpsum.new
       end
-      lyrics = ""
-      length.times { lyrics << generator.paragraph }
+      lyrics = Faker::Lorem.characters(1)
+      # length.times { lyrics << generator.paragraph }
 
       file = Tempfile.new ["audio", ".wav"]
       %x[ echo "#{lyrics}" | espeak --stdin -s 120 --stdout > #{file.path}]
