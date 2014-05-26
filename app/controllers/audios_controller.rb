@@ -27,6 +27,10 @@ class AudiosController < ApplicationController
     logger.tagged("Benchmark-#{@audio.class}") { logger.info Time.now - start }
   end
 
+  def name
+    render text: model.find(params[:id]).name
+  end
+
   def destroy
     @audio = model.find(params[:id])
     @audio.destroy
