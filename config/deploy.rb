@@ -5,8 +5,9 @@ require 'mina/rbenv'
 require 'mina_sidekiq/tasks'
 
 set :term_mode, :system
-set :domain, 'merch-home-riak'
-set :deploy_to, '/home/app'
+set :domain, 'localhost'
+set :user, 'www-data'
+set :deploy_to, '/var/www/riak'
 set :repository, 'https://github.com/Rabsztok/riak-test-app.git'
 set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'config/ripple.yml', 'config/initializers/carrierwave.rb', 'public/system', 'log']
@@ -42,7 +43,7 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      queue 'sudo /etc/init.d/apache2 restart'
+      queue 'sudo service nginx restart'
       invoke :'sidekiq:restart'
     end
   end
