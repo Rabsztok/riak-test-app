@@ -43,7 +43,7 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      queue 'sudo service nginx restart'
+      invoke :'puma:restart'
       invoke :'sidekiq:restart'
     end
   end
