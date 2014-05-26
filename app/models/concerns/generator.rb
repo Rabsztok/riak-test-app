@@ -15,7 +15,6 @@ module Generator
       %x[ echo "#{lyrics}" | espeak --stdin -s 120 --stdout > #{file.path}]
 
       create name: Forgery(:name).company_name, attachment: file
-    ensure
       file.close
       file.unlink
     end
