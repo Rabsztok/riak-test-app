@@ -2,6 +2,7 @@ require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
 require 'mina/rbenv'
+require 'mina/puma'
 require 'mina_sidekiq/tasks'
 
 set :term_mode, :system

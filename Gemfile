@@ -30,4 +30,4 @@ gem 'yajl-ruby'
 gem 'riak-client', :require => 'riak'
 gem 'carrierwave'
 gem 'carrierwave-riak', :require => "carrierwave/riak"
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem "carrierwave-mongoid", github: "jnicklas/carrierwave-mongoid"
