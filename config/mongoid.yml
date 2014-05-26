@@ -10,4 +10,4 @@ production:
     default:
       database: mongoid
       hosts:
-        - 10.10.10.33:27017
+        - localhost:27017
