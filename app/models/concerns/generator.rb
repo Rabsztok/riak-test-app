@@ -2,14 +2,14 @@ module Generator
   extend ActiveSupport::Concern
 
   included do
-    def self.generate(length = 7)
+    def self.generate(length = 1)
       generator = case Random.rand(3)
         when 0 then Faker::SamuelLIpsum.new
         when 1 then Faker::MetalIpsum.new
         else Faker::BaconIpsum.new
       end
-      lyrics = Faker::Lorem.characters(1)
-      # length.times { lyrics << generator.paragraph }
+      lyrics = ""
+      length.times { lyrics << generator.paragraph }
 
       file = Tempfile.new ["audio", ".wav"]
       %x[ echo "#{lyrics}" | espeak --stdin -s 120 --stdout > #{file.path}]
