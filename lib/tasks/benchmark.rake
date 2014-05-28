@@ -17,8 +17,8 @@ namespace :benchmark do
         end
         results << Time.now - start
       end
-      (results.sum / results.count).round(3).to_s.sub('.',',')
+      (results.sum).round(3).to_s.sub('.',',')
     end
-    puts final_results.inspect.tr('[]','')
+    puts final_results
   end
 end
