@@ -17,14 +17,12 @@ class AudiosController < ApplicationController
   end
 
   def download
-    start = Time.new
     @audio = model.find(params[:id])
     content = @audio.attachment.read
-    if stale?(etag: content, last_modified: @audio.updated_at.utc, public: true)
-      send_data content, type: "audio/x-wav", disposition: "inline"
-      expires_in 0, public: true
-    end
-    logger.tagged("Benchmark-#{@audio.class}") { logger.info Time.now - start }
+    #if stale?(etag: content, last_modified: @audio.updated_at.utc, public: true)
+      send_data content, type: "audio/x-wav", disposition: "inline", stream: true
+    #  expires_in 0, public: true
+    #end
   end
 
   def name

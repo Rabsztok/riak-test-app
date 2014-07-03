@@ -23,6 +23,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'typhoeus'
 
 gem 'mongoid', '~> 4.0.0.beta1', github: 'mongoid/mongoid'
 gem 'curb'
