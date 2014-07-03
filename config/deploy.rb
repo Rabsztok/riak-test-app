@@ -6,9 +6,9 @@ require 'mina/puma'
 require 'mina_sidekiq/tasks'
 
 set :term_mode, :system
-set :domain, 'localhost'
-set :user, 'www-data'
-set :deploy_to, '/var/www/riak'
+set :domain, 'merch-home-riak'
+set :user, 'app'
+set :deploy_to, '/home/app'
 set :repository, 'https://github.com/Rabsztok/riak-test-app.git'
 set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'config/ripple.yml', 'config/initializers/carrierwave.rb', 'public/system', 'public/uploads', 'log']
